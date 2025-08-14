@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- The title will be updated by JavaScript -->
+    <title>Destination Details | Heritage Yatri</title>
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Internal CSS for custom styles -->
+    <style>
+      /* Apply Poppins font and the light sky theme */
+      body {
+        font-family: "Poppins", sans-serif;
+        background-color: #f0f9ff; /* Light sky blue theme */
+      }
+      .fact-item {
+        display: flex;
+        justify-content: space-between;
+        padding: 0.75rem 0;
+        border-bottom: 1px solid #e5e7eb; /* gray-200 */
+      }
+    </style>
+  </head>
+  <body class="text-gray-800">
+    <!-- Header & Navigation -->
+    <header class="bg-white/80 backdrop-blur-md shadow-sm sticky top-0 z-50">
+      <nav
+        class="container mx-auto px-6 py-4 flex justify-between items-center"
+      >
+        <a href="index.html" class="text-2xl font-bold text-orange-600"
+          >Heritage Yatri</a
+        >
+        <div class="hidden md:flex space-x-8 text-lg">
+          <a href="index.html" class="hover:text-orange-600 transition-colors"
+            >Home</a
+          >
+          <!-- Active page link -->
+          <a href="destinations.html" class="text-orange-600 font-semibold"
+            >Destinations</a
+          >
+          <a href="stays.html" class="hover:text-orange-600 transition-colors"
+            >Stays</a
+          >
+          <a href="cuisine.html" class="hover:text-orange-600 transition-colors"
+            >Cuisine</a
+          >
+          <a
+            href="itinerary.html"
+            class="hover:text-orange-600 transition-colors"
+            >Itineraries</a
+          >
+          <a href="about.html" class="hover:text-orange-600 transition-colors"
+            >About Us</a
+          >
+        </div>
+        <a
+          href="contact.html"
+          class="hidden md:block bg-orange-600 text-white rounded-full px-5 py-2 font-semibold hover:bg-orange-700 transition-colors"
+          >Contact Us</a
+        >
+        <!-- Mobile Menu Button (non-functional for now) -->
+        <button class="md:hidden text-gray-700">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-6 w-6"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16m-7 6h7"
+            />
+          </svg>
+        </button>
+      </nav>
+    </header>
+
+    <main id="destination-content">
+      <!-- This content will be replaced by JavaScript -->
+      <div class="container mx-auto px-6 py-20 text-center">
+        <h1 class="text-3xl font-bold">Loading Destination...</h1>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white">
+      <div class="container mx-auto px-6 py-12">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <div>
+            <h3 class="text-lg font-bold mb-4">Heritage Yatri</h3>
+            <p class="text-gray-400">
+              Your trusted companion for exploring the rich culture and heritage
+              of Western Odisha.
+            </p>
+          </div>
+          <div>
+            <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+            <ul class="space-y-2 text-gray-400">
+              <li>
+                <a href="about.html" class="hover:text-white">About Us</a>
+              </li>
+              <li>
+                <a href="contact.html" class="hover:text-white">Contact</a>
+              </li>
+              <li><a href="#" class="hover:text-white">FAQs</a></li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="text-lg font-semibold mb-4">Explore</h3>
+            <ul class="space-y-2 text-gray-400">
+              <li>
+                <a href="destinations.html" class="hover:text-white"
+                  >Destinations</a
+                >
+              </li>
+              <li>
+                <a href="stays.html" class="hover:text-white">Hotels & Stays</a>
+              </li>
+              <li>
+                <a href="cuisine.html" class="hover:text-white"
+                  >Local Cuisine</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="text-lg font-semibold mb-4">Follow Us</h3>
+            <div class="flex space-x-4">
+              <a
+                href="#"
+                aria-label="Facebook"
+                class="text-gray-400 hover:text-white"
+                ><svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                  <path
+                    d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v2.385z"
+                  ></path></svg
+              ></a>
+              <a
+                href="#"
+                aria-label="Instagram"
+                class="text-gray-400 hover:text-white"
+                ><svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                  <path
+                    d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.85s-.011 3.584-.069 4.85c-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07s-3.584-.012-4.85-.07c-3.252-.148-4.771-1.691-4.919-4.919-.058-1.265-.069-1.645-.069-4.85s.011-3.584.069-4.85c.149-3.225 1.664 4.771 4.919 4.919 1.266-.057 1.644-.069 4.85-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948s.014 3.667.072 4.947c.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072s3.667-.014 4.947-.072c4.358-.2 6.78-2.618 6.98-6.98.059-1.281.073-1.689.073-4.948s-.014-3.667-.072-4.947c-.2-4.358-2.618-6.78-6.98-6.98-1.281-.059-1.689-.073-4.948-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.162 6.162 6.162 6.162-2.759 6.162-6.162-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4s1.791-4 4-4 4 1.79 4 4-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.441 1.441 1.441 1.441-.645 1.441-1.441-.645-1.44-1.441-1.44z"
+                  ></path></svg
+              ></a>
+            </div>
+          </div>
+        </div>
+        <div
+          class="mt-12 border-t border-gray-700 pt-8 text-center text-gray-500"
+        >
+          <p>&copy; 2025 Heritage Yatri. All Rights Reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // --- DATA (from data.js) ---
+      const destinationsData = [
+        {
+          id: 1,
+          name: "Harishankar Temple",
+          category: "Temple",
+          shortDescription:
+            "A serene temple nestled between two hills, with a picturesque stream.",
+          longDescription:
+            "The Harishankar Temple is a unique shrine located on the southern slope of the Gandhamardan Hills. It is dedicated to the dual deities of Hari (Lord Vishnu) and Shankar (Lord Shiva). A perennial stream flows down the granite bed, creating a beautiful environment that attracts pilgrims and nature lovers alike.",
+          images: ["images/dest-harishankar.webp"],
+          quickFacts: {
+            bestTime: "October to March",
+            entryFee: "None",
+            timeRequired: "3 - 4 hours",
+            activities: "Pilgrimage, Trekking, Picnic",
+          },
+          mapUrl:
+            "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15024.4984252199!2d82.8598716248386!3d20.887208249821616!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a251c6555555555%3A0x89793185341c2c2e!2sHarishankar%20Temple!5e0!3m2!1sen!2sin!4v1668273824512!5m2!1sen!2sin",
+        },
+        {
+          id: 2,
+          name: "Hirakud Dam",
+          category: "Historical Site",
+          shortDescription:
+            "One of the longest earthen dams in the world, offering breathtaking views.",
+          longDescription:
+            "Built across the Mahanadi River, Hirakud Dam is an engineering marvel and a major tourist attraction. The vast reservoir forms the largest artificial lake in Asia. Visitors can enjoy panoramic views from the revolving tower, Gandhi Minar, and witness the spectacular release of water during the monsoon.",
+          images: ["images/dest-hirakud.webp"],
+          quickFacts: {
+            bestTime: "September to March",
+            entryFee: "Free (charges for tower)",
+            timeRequired: "2 - 3 hours",
+            activities: "Sightseeing, Boating, Photography",
+          },
+          mapUrl:
+            "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3709.684179426372!2d83.8569996149429!3d21.5975567856926!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a213b38234a9b6d%3A0x2c64e5651b279603!2sHirakud%20Dam!5e0!3m2!1sen!2sin!4v1668274000000!5m2!1sen!2sin",
+        },
+        {
+          id: 3,
+          name: "64 Yoginis Temple",
+          category: "Historical Site",
+          shortDescription:
+            "A unique circular temple with ancient tantric heritage and stunning carvings.",
+          longDescription:
+            "Located in Ranipur-Jharial, this hypaethral (roofless) temple is one of the few surviving temples of its kind in India. It is dedicated to the 64 Yoginis, manifestations of the divine feminine. The site holds immense archaeological and historical importance.",
+          images: ["images/dest-yogini.webp"],
+          quickFacts: {
+            bestTime: "November to February",
+            entryFee: "None",
+            timeRequired: "1 - 2 hours",
+            activities: "History, Architecture, Spirituality",
+          },
+          mapUrl:
+            "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3719.648386345638!2d83.3361111149432!3d20.29416668638198!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a23a8d1e9d1a38b%3A0x6a0e698188182f5b!2sChausath%20Yogini%20Temple!5e0!3m2!1sen!2sin!4v1668274100000!5m2!1sen!2sin",
+        },
+        {
+          id: 4,
+          name: "Pradhanpat Waterfalls",
+          category: "Nature",
+          shortDescription:
+            "A spectacular waterfall surrounded by a forest, perfect for a day trip.",
+          longDescription:
+            "Located near Deogarh, the Pradhanpat waterfall is a scenic spot known for its natural beauty. The water cascades down a series of steps, creating a mesmerizing effect. It's an ideal location for picnics and relaxation.",
+          images: ["images/dest-pradhanpat.webp"],
+          quickFacts: {
+            bestTime: "Monsoon & Post-Monsoon",
+            entryFee: "None",
+            timeRequired: "2 hours",
+            activities: "Picnic, Nature Walk",
+          },
+          mapUrl: "",
+        },
+        {
+          id: 5,
+          name: "Samaleswari Temple",
+          category: "Temple",
+          shortDescription:
+            "A major Hindu shrine dedicated to the goddess Maa Samaleswari.",
+          longDescription:
+            "Situated on the banks of the river Mahanadi in Sambalpur, this temple is a significant pilgrimage center. The goddess is the presiding deity of Western Odisha, and the temple architecture reflects the local style.",
+          images: ["images/dest-samaleswari.webp"],
+          quickFacts: {
+            bestTime: "All year",
+            entryFee: "None",
+            timeRequired: "1-2 hours",
+            activities: "Pilgrimage, Spirituality",
+          },
+          mapUrl: "",
+        },
+        {
+          id: 6,
+          name: "Debrigarh Wildlife Sanctuary",
+          category: "Nature",
+          shortDescription:
+            "Home to diverse flora and fauna, ideal for wildlife enthusiasts.",
+          longDescription:
+            "Adjacent to the Hirakud Dam, this sanctuary is home to a rich variety of wildlife, including Indian bison, sambar, and numerous bird species. It's a fantastic destination for safaris and bird watching.",
+          images: ["images/dest-debrigarh.webp"],
+          quickFacts: {
+            bestTime: "November to April",
+            entryFee: "Varies",
+            timeRequired: "Half-day",
+            activities: "Jungle Safari, Bird Watching",
+          },
+          mapUrl: "",
+        },
+        {
+          id: 7,
+          name: "Nrusinghanath Temple",
+          category: "Temple",
+          shortDescription:
+            "A revered 14th-century temple at the foothills of the Gandhamardan Hills.",
+          longDescription:
+            "Located on the northern slope of the Gandhamardan hills, this temple forms a pair with Harishankar on the southern slope. It is dedicated to Lord Nrusinghanath, an avatar of Lord Vishnu.",
+          images: ["images/dest-nrusinghanath.webp"],
+          quickFacts: {
+            bestTime: "October to March",
+            entryFee: "None",
+            timeRequired: "2-3 hours",
+            activities: "Pilgrimage, Trekking",
+          },
+          mapUrl: "",
+        },
+        {
+          id: 8,
+          name: "Huma's Leaning Temple",
+          category: "Temple",
+          shortDescription: "One of the only two leaning temples in the world.",
+          longDescription:
+            "Dedicated to Lord Shiva, the Leaning Temple of Huma, located near Sambalpur, is an architectural curiosity. While the main temple leans, the smaller temples within the complex are upright. The reason for the lean remains a mystery.",
+          images: ["images/dest-huma.webp"],
+          quickFacts: {
+            bestTime: "All year",
+            entryFee: "None",
+            timeRequired: "1 hour",
+            activities: "Architecture, Spirituality",
+          },
+          mapUrl: "",
+        },
+        {
+          id: 9,
+          name: "Patora Dam",
+          category: "Nature",
+          shortDescription:
+            "A scenic dam and picnic spot surrounded by lush greenery.",
+          longDescription:
+            "Located in the Nuapada district, Patora Dam is built on the Jonk River. The surrounding Yogeswar Temple and lush forests make it a popular spot for locals and tourists looking for a tranquil getaway.",
+          images: ["images/dest-patora.webp"],
+          quickFacts: {
+            bestTime: "Winter",
+            entryFee: "None",
+            timeRequired: "2-3 hours",
+            activities: "Picnic, Boating",
+          },
+          mapUrl: "",
+        },
+        {
+          id: 10,
+          name: "Gudguda Waterfall",
+          category: "Nature",
+          shortDescription:
+            "A multi-tiered waterfall hidden inside a dense forest.",
+          longDescription:
+            "Gudguda, one of the most beautiful waterfalls in the Sambalpur district, offers a stunning sight with water falling from a great height in multiple steps. It's a perfect spot for adventure seekers and trekkers.",
+          images: ["images/dest-gudguda.webp"],
+          quickFacts: {
+            bestTime: "Post-Monsoon",
+            entryFee: "None",
+            timeRequired: "3-4 hours",
+            activities: "Trekking, Adventure",
+          },
+          mapUrl: "",
+        },
+      ];
+
+      // --- DYNAMIC PAGE LOGIC ---
+      document.addEventListener("DOMContentLoaded", () => {
+        const contentArea = document.getElementById("destination-content");
+
+        // Get the ID from the URL
+        const params = new URLSearchParams(window.location.search);
+        const destinationId = parseInt(params.get("id"));
+
+        if (!destinationId) {
+          displayError(contentArea);
+          return;
+        }
+
+        // Find the destination data
+        const destination = destinationsData.find(
+          (d) => d.id === destinationId
+        );
+
+        if (!destination) {
+          displayError(contentArea);
+          return;
+        }
+
+        // Update the page title
+        document.title = `${destination.name} | Heritage Yatri`;
+
+        // Build the HTML content
+        contentArea.innerHTML = `
+                <!-- Hero Section with Image -->
+                <section class="relative bg-gray-700 h-96">
+                    <img src="${destination.images[0]}" alt="${
+          destination.name
+        }" class="w-full h-full object-cover opacity-60">
+                    <div class="absolute inset-0 flex flex-col justify-center items-center text-white text-center p-6">
+                        <h1 class="text-4xl md:text-6xl font-bold tracking-tight">${
+                          destination.name
+                        }</h1>
+                        <p class="mt-4 text-lg md:text-xl max-w-3xl">${
+                          destination.shortDescription
+                        }</p>
+                    </div>
+                </section>
+
+                <!-- Details Section -->
+                <section class="py-20 md:py-24">
+                    <div class="container mx-auto px-6 grid lg:grid-cols-3 gap-12">
+
+                        <!-- Left Column: Description -->
+                        <div class="lg:col-span-2">
+                            <h2 class="text-3xl font-bold mb-6">About ${
+                              destination.name
+                            }</h2>
+                            <p class="text-gray-700 leading-relaxed">${
+                              destination.longDescription
+                            }</p>
+                        </div>
+
+                        <!-- Right Column: Quick Facts -->
+                        <div class="bg-white p-8 rounded-lg shadow-lg h-fit">
+                            <h3 class="text-2xl font-bold mb-4">Quick Facts</h3>
+                            <div class="space-y-3">
+                                <div class="fact-item">
+                                    <span class="font-semibold">Best Time to Visit</span>
+                                    <span class="text-gray-600">${
+                                      destination.quickFacts.bestTime
+                                    }</span>
+                                </div>
+                                <div class="fact-item">
+                                    <span class="font-semibold">Entry Fee</span>
+                                    <span class="text-gray-600">${
+                                      destination.quickFacts.entryFee
+                                    }</span>
+                                </div>
+                                <div class="fact-item">
+                                    <span class="font-semibold">Time Required</span>
+                                    <span class="text-gray-600">${
+                                      destination.quickFacts.timeRequired
+                                    }</span>
+                                </div>
+                                <div class="fact-item">
+                                    <span class="font-semibold">Activities</span>
+                                    <span class="text-gray-600">${
+                                      destination.quickFacts.activities
+                                    }</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                
+                <!-- Map Section -->
+                ${
+                  destination.mapUrl
+                    ? `
+                <section class="container mx-auto px-6 pb-20 md:pb-24">
+                     <h2 class="text-3xl font-bold text-center mb-12">Location Map</h2>
+                     <div class="rounded-2xl shadow-xl overflow-hidden h-96">
+                        <iframe 
+                            src="${destination.mapUrl}" 
+                            width="100%" 
+                            height="100%" 
+                            style="border:0;" 
+                            allowfullscreen="" 
+                            loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                     </div>
+                </section>`
+                    : ""
+                }
+            `;
+      });
+
+      function displayError(element) {
+        document.title = "Destination Not Found | Heritage Yatri";
+        element.innerHTML = `
+                <div class="container mx-auto px-6 py-20 text-center">
+                    <h1 class="text-4xl font-bold text-orange-600">Oops! Destination Not Found</h1>
+                    <p class="mt-4 text-lg text-gray-600">We couldn't find the destination you're looking for. It might have been moved or the link is incorrect.</p>
+                    <div class="mt-8">
+                        <a href="destinations.html" class="bg-orange-600 text-white rounded-full px-8 py-3 font-semibold text-lg hover:bg-orange-700 transition-colors">
+                            Explore All Destinations
+                        </a>
+                    </div>
+                </div>
+            `;
+      }
+    </script>
+    <!-- SOS Floating Action Button -->
+    <button
+      id="sos-btn"
+      class="fixed bottom-5 right-5 bg-red-600 text-white w-16 h-16 rounded-full flex items-center justify-center shadow-lg z-50 transform hover:scale-110 transition-transform"
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        class="h-8 w-8"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"
+        />
+      </svg>
+      <span
+        class="absolute top-0 right-0 block h-4 w-4 rounded-full bg-red-800 ring-2 ring-white"
+      ></span>
+    </button>
+
+    <!-- SOS Modal -->
+    <div
+      id="sos-modal"
+      class="fixed inset-0 bg-black bg-opacity-60 flex items-center justify-center z-60 hidden"
+    >
+      <div class="bg-white rounded-lg p-8 m-4 max-w-sm w-full shadow-2xl">
+        <div class="flex justify-between items-center mb-4">
+          <h2 class="text-2xl font-bold text-red-600">Emergency Contacts</h2>
+          <button
+            id="close-sos-modal"
+            class="text-gray-500 hover:text-gray-800 text-3xl"
+          >
+            &times;
+          </button>
+        </div>
+        <p class="mb-6 text-gray-600">
+          In case of an emergency, please use the numbers below.
+        </p>
+        <div class="space-y-4">
+          <a
+            href="tel:100"
+            class="block w-full text-left bg-red-50 p-4 rounded-lg hover:bg-red-100 transition-colors"
+            ><p class="font-bold text-lg">Police</p>
+            <p class="text-red-600 font-semibold">Dial 100</p></a
+          >
+          <a
+            href="tel:108"
+            class="block w-full text-left bg-red-50 p-4 rounded-lg hover:bg-red-100 transition-colors"
+            ><p class="font-bold text-lg">Ambulance & Fire</p>
+            <p class="text-red-600 font-semibold">Dial 108</p></a
+          >
+          <a
+            href="tel:1363"
+            class="block w-full text-left bg-red-50 p-4 rounded-lg hover:bg-red-100 transition-colors"
+            ><p class="font-bold text-lg">Tourist Helpline</p>
+            <p class="text-red-600 font-semibold">Dial 1363</p></a
+          >
+        </div>
+      </div>
+    </div>
+
+    <!-- Yatri Buddy Chatbot Button -->
+    <button
+      id="chatbot-btn"
+      class="fixed bottom-5 left-5 bg-orange-600 text-white w-16 h-16 rounded-full flex items-center justify-center shadow-lg z-50 transform hover:scale-110 transition-transform"
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        class="h-8 w-8"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"
+        />
+      </svg>
+    </button>
+
+    <!-- Yatri Buddy Chat Window -->
+    <div
+      id="chat-window"
+      class="fixed bottom-24 left-5 w-80 h-96 bg-white rounded-xl shadow-2xl z-60 hidden flex-col"
+    >
+      <div class="bg-orange-600 text-white p-4 rounded-t-xl">
+        <h3 class="font-bold text-lg">Yatri Buddy</h3>
+        <p class="text-sm opacity-90">How can I help you?</p>
+      </div>
+      <div id="chat-messages" class="flex-grow p-4 overflow-y-auto bg-sky-50">
+        <div id="chat-messages" class="flex-grow p-4 overflow-y-auto bg-sky-50">
+          <!-- Messages will appear here dynamically -->
+        </div>
+      </div>
+      <div id="chat-options" class="p-2 border-t">
+        <button
+          class="chat-option w-full text-left p-2 rounded-lg text-sm hover:bg-gray-100 mb-1"
+        >
+          Find a destination
+        </button>
+        <button
+          class="chat-option w-full text-left p-2 rounded-lg text-sm hover:bg-gray-100 mb-1"
+        >
+          Booking help
+        </button>
+        <button
+          class="chat-option w-full text-left p-2 rounded-lg text-sm hover:bg-gray-100 mb-1"
+        >
+          Local food info
+        </button>
+      </div>
+    </div>
+
+    <!-- ============================================= -->
+    <!--     LINK EXTERNAL JAVASCRIPT FILES HERE     -->
+    <!-- ============================================= -->
+    <script src="sos.js"></script>
+    <script src="chatbot.js"></script>
+  </body>
+</html>

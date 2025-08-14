@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Explore Destinations | Heritage Yatri</title>
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Internal CSS for custom styles -->
+    <style>
+      /* Apply Poppins font and the light sky theme */
+      body {
+        font-family: "Poppins", sans-serif;
+        background-color: #f0f9ff; /* Light sky blue theme */
+      }
+    </style>
+  </head>
+  <body class="text-gray-800">
+    <!-- Header & Navigation -->
+    <header class="bg-white/80 backdrop-blur-md shadow-sm sticky top-0 z-50">
+      <nav
+        class="container mx-auto px-6 py-4 flex justify-between items-center"
+      >
+        <a href="index.html" class="text-2xl font-bold text-orange-600"
+          >Heritage Yatri</a
+        >
+        <div class="hidden md:flex space-x-8 text-lg">
+          <a href="index.html" class="hover:text-orange-600 transition-colors"
+            >Home</a
+          >
+          <!-- Active page link -->
+          <a href="destinations.html" class="text-orange-600 font-semibold"
+            >Destinations</a
+          >
+          <a href="stays.html" class="hover:text-orange-600 transition-colors"
+            >Stays</a
+          >
+          <a href="cuisine.html" class="hover:text-orange-600 transition-colors"
+            >Cuisine</a
+          >
+          <a
+            href="itinerary.html"
+            class="hover:text-orange-600 transition-colors"
+            >Itineraries</a
+          >
+          <a href="about.html" class="hover:text-orange-600 transition-colors"
+            >About Us</a
+          >
+        </div>
+        <a
+          href="contact.html"
+          class="hidden md:block bg-orange-600 text-white rounded-full px-5 py-2 font-semibold hover:bg-orange-700 transition-colors"
+          >Contact Us</a
+        >
+        <!-- Mobile Menu Button (non-functional for now) -->
+        <button class="md:hidden text-gray-700">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-6 w-6"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16m-7 6h7"
+            />
+          </svg>
+        </button>
+      </nav>
+    </header>
+
+    <main>
+      <!-- Page Header -->
+      <section class="bg-white py-16 md:py-20">
+        <div class="container mx-auto px-6 text-center">
+          <h1
+            class="text-4xl md:text-5xl font-bold text-gray-800 tracking-tight"
+          >
+            Explore Western Odisha
+          </h1>
+          <p class="mt-4 text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
+            From ancient temples to breathtaking natural wonders, discover the
+            treasures of the region.
+          </p>
+        </div>
+      </section>
+
+      <!-- Filter and Destinations Grid -->
+      <section class="py-20 md:py-24">
+        <div class="container mx-auto px-6">
+          <!-- Filter Buttons -->
+          <div
+            id="filter-buttons"
+            class="flex justify-center flex-wrap gap-4 mb-12"
+          >
+            <button
+              class="filter-btn bg-orange-600 text-white rounded-full px-6 py-2 font-semibold transition-colors"
+              data-filter="All"
+            >
+              All
+            </button>
+            <button
+              class="filter-btn bg-white text-gray-700 rounded-full px-6 py-2 font-semibold hover:bg-orange-100 transition-colors"
+              data-filter="Temple"
+            >
+              Temples
+            </button>
+            <button
+              class="filter-btn bg-white text-gray-700 rounded-full px-6 py-2 font-semibold hover:bg-orange-100 transition-colors"
+              data-filter="Nature"
+            >
+              Nature
+            </button>
+            <button
+              class="filter-btn bg-white text-gray-700 rounded-full px-6 py-2 font-semibold hover:bg-orange-100 transition-colors"
+              data-filter="Historical Site"
+            >
+              Historical Sites
+            </button>
+          </div>
+
+          <!-- Destinations Grid -->
+          <div
+            id="destinations-grid"
+            class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+          >
+            <!-- Destination cards will be injected here by JavaScript -->
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white">
+      <div class="container mx-auto px-6 py-12">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <div>
+            <h3 class="text-lg font-bold mb-4">Heritage Yatri</h3>
+            <p class="text-gray-400">
+              Your trusted companion for exploring the rich culture and heritage
+              of Western Odisha.
+            </p>
+          </div>
+          <div>
+            <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+            <ul class="space-y-2 text-gray-400">
+              <li>
+                <a href="about.html" class="hover:text-white">About Us</a>
+              </li>
+              <li>
+                <a href="contact.html" class="hover:text-white">Contact</a>
+              </li>
+              <li><a href="#" class="hover:text-white">FAQs</a></li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="text-lg font-semibold mb-4">Explore</h3>
+            <ul class="space-y-2 text-gray-400">
+              <li>
+                <a href="destinations.html" class="hover:text-white"
+                  >Destinations</a
+                >
+              </li>
+              <li>
+                <a href="stays.html" class="hover:text-white">Hotels & Stays</a>
+              </li>
+              <li>
+                <a href="cuisine.html" class="hover:text-white"
+                  >Local Cuisine</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="text-lg font-semibold mb-4">Follow Us</h3>
+            <div class="flex space-x-4">
+              <a
+                href="#"
+                aria-label="Facebook"
+                class="text-gray-400 hover:text-white"
+                ><svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                  <path
+                    d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v2.385z"
+                  ></path></svg
+              ></a>
+              <a
+                href="#"
+                aria-label="Instagram"
+                class="text-gray-400 hover:text-white"
+                ><svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                  <path
+                    d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.85s-.011 3.584-.069 4.85c-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07s-3.584-.012-4.85-.07c-3.252-.148-4.771-1.691-4.919-4.919-.058-1.265-.069-1.645-.069-4.85s.011-3.584.069-4.85c.149-3.225 1.664 4.771 4.919 4.919 1.266-.057 1.644-.069 4.85-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948s.014 3.667.072 4.947c.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072s3.667-.014 4.947-.072c4.358-.2 6.78-2.618 6.98-6.98.059-1.281.073-1.689.073-4.948s-.014-3.667-.072-4.947c-.2-4.358-2.618-6.78-6.98-6.98-1.281-.059-1.689-.073-4.948-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.162 6.162 6.162 6.162-2.759 6.162-6.162-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4s1.791-4 4-4 4 1.79 4 4-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.441 1.441 1.441 1.441-.645 1.441-1.441-.645-1.44-1.441-1.44z"
+                  ></path></svg
+              ></a>
+            </div>
+          </div>
+        </div>
+        <div
+          class="mt-12 border-t border-gray-700 pt-8 text-center text-gray-500"
+        >
+          <p>&copy; 2025 Heritage Yatri. All Rights Reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // --- DATA (from data.js) ---
+      const destinationsData = [
+        {
+          id: 1,
+          name: "Harishankar Temple",
+          category: "Temple",
+          shortDescription:
+            "A serene temple nestled between two hills, with a picturesque stream.",
+          images: ["images/dest-harishankar.webp"],
+        },
+        {
+          id: 2,
+          name: "Hirakud Dam",
+          category: "Historical Site",
+          shortDescription:
+            "One of the longest earthen dams in the world, offering breathtaking views.",
+          images: ["images/dest-hirakud.webp"],
+        },
+        {
+          id: 3,
+          name: "64 Yoginis Temple",
+          category: "Historical Site",
+          shortDescription:
+            "A unique circular temple with ancient tantric heritage and stunning carvings.",
+          images: ["images/dest-yogini.webp"],
+        },
+        {
+          id: 4,
+          name: "Pradhanpat Waterfalls",
+          category: "Nature",
+          shortDescription:
+            "A spectacular waterfall surrounded by a forest, perfect for a day trip.",
+          images: ["images/dest-pradhanpat.webp"],
+        },
+        {
+          id: 5,
+          name: "Samaleswari Temple",
+          category: "Temple",
+          shortDescription:
+            "A major Hindu shrine dedicated to the goddess Maa Samaleswari.",
+          images: ["images/dest-samaleswari.webp"],
+        },
+        {
+          id: 6,
+          name: "Debrigarh Wildlife Sanctuary",
+          category: "Nature",
+          shortDescription:
+            "Home to diverse flora and fauna, ideal for wildlife enthusiasts.",
+          images: ["images/dest-debrigarh.webp"],
+        },
+        {
+          id: 7,
+          name: "Nrusinghanath Temple",
+          category: "Temple",
+          shortDescription:
+            "A revered 14th-century temple at the foothills of the Gandhamardan Hills.",
+          images: ["images/dest-nrusinghanath.webp"],
+        },
+        {
+          id: 8,
+          name: "Huma's Leaning Temple",
+          category: "Temple",
+          shortDescription: "One of the only two leaning temples in the world.",
+          images: ["images/dest-huma.webp"],
+        },
+        {
+          id: 9,
+          name: "Patora Dam",
+          category: "Nature",
+          shortDescription:
+            "A scenic dam and picnic spot surrounded by lush greenery.",
+          images: ["images/dest-patora.webp"],
+        },
+        {
+          id: 10,
+          name: "Gudguda Waterfall",
+          category: "Nature",
+          shortDescription:
+            "A multi-tiered waterfall hidden inside a dense forest.",
+          images: ["images/dest-gudguda.webp"],
+        },
+      ];
+
+      // --- DYNAMIC PAGE LOGIC ---
+      document.addEventListener("DOMContentLoaded", () => {
+        const grid = document.getElementById("destinations-grid");
+        const filterButtonsContainer =
+          document.getElementById("filter-buttons");
+
+        // Function to display destinations
+        const displayDestinations = (filteredData) => {
+          grid.innerHTML = ""; // Clear existing content
+          filteredData.forEach((dest) => {
+            const card = `
+                        <div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300">
+                            <img src="${dest.images[0]}" alt="${dest.name}" class="w-full h-56 object-cover">
+                            <div class="p-6">
+                                <h3 class="text-xl font-semibold mb-2">${dest.name}</h3>
+                                <p class="text-gray-600 mb-4 h-20">${dest.shortDescription}</p>
+                                <a href="destination-detail.html?id=${dest.id}" class="text-orange-600 font-semibold hover:underline">Learn More &rarr;</a>
+                            </div>
+                        </div>
+                    `;
+            grid.innerHTML += card;
+          });
+        };
+
+        // Initial display of all destinations
+        displayDestinations(destinationsData);
+
+        // Filter logic
+        filterButtonsContainer.addEventListener("click", (e) => {
+          if (e.target.tagName === "BUTTON") {
+            const filter = e.target.getAttribute("data-filter");
+
+            // Update button styles
+            document.querySelectorAll(".filter-btn").forEach((btn) => {
+              btn.classList.remove("bg-orange-600", "text-white");
+              btn.classList.add("bg-white", "text-gray-700");
+            });
+            e.target.classList.add("bg-orange-600", "text-white");
+            e.target.classList.remove("bg-white", "text-gray-700");
+
+            // Filter and display data
+            if (filter === "All") {
+              displayDestinations(destinationsData);
+            } else {
+              const filtered = destinationsData.filter(
+                (dest) => dest.category === filter
+              );
+              displayDestinations(filtered);
+            }
+          }
+        });
+      });
+    </script>
+    <!-- SOS Floating Action Button -->
+    <button
+      id="sos-btn"
+      class="fixed bottom-5 right-5 bg-red-600 text-white w-16 h-16 rounded-full flex items-center justify-center shadow-lg z-50 transform hover:scale-110 transition-transform"
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        class="h-8 w-8"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"
+        />
+      </svg>
+      <span
+        class="absolute top-0 right-0 block h-4 w-4 rounded-full bg-red-800 ring-2 ring-white"
+      ></span>
+    </button>
+
+    <!-- SOS Modal -->
+    <div
+      id="sos-modal"
+      class="fixed inset-0 bg-black bg-opacity-60 flex items-center justify-center z-60 hidden"
+    >
+      <div class="bg-white rounded-lg p-8 m-4 max-w-sm w-full shadow-2xl">
+        <div class="flex justify-between items-center mb-4">
+          <h2 class="text-2xl font-bold text-red-600">Emergency Contacts</h2>
+          <button
+            id="close-sos-modal"
+            class="text-gray-500 hover:text-gray-800 text-3xl"
+          >
+            &times;
+          </button>
+        </div>
+        <p class="mb-6 text-gray-600">
+          In case of an emergency, please use the numbers below.
+        </p>
+        <div class="space-y-4">
+          <a
+            href="tel:100"
+            class="block w-full text-left bg-red-50 p-4 rounded-lg hover:bg-red-100 transition-colors"
+            ><p class="font-bold text-lg">Police</p>
+            <p class="text-red-600 font-semibold">Dial 100</p></a
+          >
+          <a
+            href="tel:108"
+            class="block w-full text-left bg-red-50 p-4 rounded-lg hover:bg-red-100 transition-colors"
+            ><p class="font-bold text-lg">Ambulance & Fire</p>
+            <p class="text-red-600 font-semibold">Dial 108</p></a
+          >
+          <a
+            href="tel:1363"
+            class="block w-full text-left bg-red-50 p-4 rounded-lg hover:bg-red-100 transition-colors"
+            ><p class="font-bold text-lg">Tourist Helpline</p>
+            <p class="text-red-600 font-semibold">Dial 1363</p></a
+          >
+        </div>
+      </div>
+    </div>
+
+    <!-- Yatri Buddy Chatbot Button -->
+    <button
+      id="chatbot-btn"
+      class="fixed bottom-5 left-5 bg-orange-600 text-white w-16 h-16 rounded-full flex items-center justify-center shadow-lg z-50 transform hover:scale-110 transition-transform"
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        class="h-8 w-8"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"
+        />
+      </svg>
+    </button>
+
+    <!-- Yatri Buddy Chat Window -->
+    <div
+      id="chat-window"
+      class="fixed bottom-24 left-5 w-80 h-96 bg-white rounded-xl shadow-2xl z-60 hidden flex-col"
+    >
+      <div class="bg-orange-600 text-white p-4 rounded-t-xl">
+        <h3 class="font-bold text-lg">Yatri Buddy</h3>
+        <p class="text-sm opacity-90">How can I help you?</p>
+      </div>
+      <div id="chat-messages" class="flex-grow p-4 overflow-y-auto bg-sky-50">
+        <div id="chat-messages" class="flex-grow p-4 overflow-y-auto bg-sky-50">
+          <!-- Messages will appear here dynamically -->
+        </div>
+      </div>
+      <div id="chat-options" class="p-2 border-t">
+        <button
+          class="chat-option w-full text-left p-2 rounded-lg text-sm hover:bg-gray-100 mb-1"
+        >
+          Find a destination
+        </button>
+        <button
+          class="chat-option w-full text-left p-2 rounded-lg text-sm hover:bg-gray-100 mb-1"
+        >
+          Booking help
+        </button>
+        <button
+          class="chat-option w-full text-left p-2 rounded-lg text-sm hover:bg-gray-100 mb-1"
+        >
+          Local food info
+        </button>
+      </div>
+    </div>
+
+    <!-- ============================================= -->
+    <!--     LINK EXTERNAL JAVASCRIPT FILES HERE     -->
+    <!-- ============================================= -->
+    <script src="sos.js"></script>
+    <script src="chatbot.js"></script>
+  </body>
+</html>
