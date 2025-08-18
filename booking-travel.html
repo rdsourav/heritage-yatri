@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Book Your Stay - Heritage Yatri</title>
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Internal CSS for custom styles -->
+    <style>
+      body {
+        font-family: "Poppins", sans-serif;
+        background-color: #f0f9ff; /* Light sky blue theme */
+      }
+    </style>
+  </head>
+  <body class="text-gray-800">
+    <!-- Header & Navigation (Consistent with other pages) -->
+    <header class="bg-white/80 backdrop-blur-md shadow-sm sticky top-0 z-50">
+      <nav
+        class="container mx-auto px-6 py-4 flex justify-between items-center"
+      >
+        <a href="index.html" class="text-2xl font-bold text-orange-600"
+          >Heritage Yatri</a
+        >
+        <div class="hidden md:flex space-x-8 text-lg">
+          <a href="index.html" class="hover:text-orange-600 transition-colors"
+            >Home</a
+          >
+          <a
+            href="destinations.html"
+            class="hover:text-orange-600 transition-colors"
+            >Destinations</a
+          >
+          <a href="stays.html" class="hover:text-orange-600 transition-colors"
+            >Stays</a
+          >
+          <a
+            href="cuisine.html"
+            class="hover:text-orange-600 transition-colors"
+            >Cuisine</a
+          >
+          <a
+            href="itinerary.html"
+            class="hover:text-orange-600 transition-colors"
+            >Itineraries</a
+          >
+          <a href="about.html" class="hover:text-orange-600 transition-colors"
+            >About Us</a
+          >
+        </div>
+        <a
+          href="contact.html"
+          class="hidden md:block bg-orange-600 text-white rounded-full px-5 py-2 font-semibold hover:bg-orange-700 transition-colors"
+          >Contact Us</a
+        >
+        <button class="md:hidden text-gray-700">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-6 w-6"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16m-7 6h7"
+            />
+          </svg>
+        </button>
+      </nav>
+    </header>
+
+    <main class="container mx-auto px-6 py-12 md:py-20">
+      <div class="max-w-2xl mx-auto bg-white p-8 rounded-xl shadow-lg">
+        <h1 class="text-3xl font-bold mb-2">Complete Your Booking</h1>
+        
+        <!-- Hotel details will be injected here by JavaScript -->
+        <div id="hotel-details" class="mb-8 p-4 bg-sky-50 rounded-lg">
+          <h2 id="hotel-name" class="text-2xl text-orange-600 font-semibold">
+            Loading...
+          </h2>
+          <p id="hotel-location" class="text-gray-600 mt-1"></p>
+        </div>
+
+        <!-- Booking Form -->
+        <form id="booking-form">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+            <div>
+              <label
+                for="checkin"
+                class="block text-sm font-medium text-gray-700 mb-1"
+                >Check-in Date</label
+              >
+              <input
+                type="date"
+                id="checkin"
+                class="w-full p-3 border border-gray-300 rounded-lg focus:ring-orange-500 focus:border-orange-500"
+                required
+              />
+            </div>
+            <div>
+              <label
+                for="checkout"
+                class="block text-sm font-medium text-gray-700 mb-1"
+                >Check-out Date</label
+              >
+              <input
+                type="date"
+                id="checkout"
+                class="w-full p-3 border border-gray-300 rounded-lg focus:ring-orange-500 focus:border-orange-500"
+                required
+              />
+            </div>
+          </div>
+          <div class="mb-6">
+            <label
+              for="fullname"
+              class="block text-sm font-medium text-gray-700 mb-1"
+              >Full Name</label
+            >
+            <input
+              type="text"
+              id="fullname"
+              placeholder="Enter your full name"
+              class="w-full p-3 border border-gray-300 rounded-lg focus:ring-orange-500 focus:border-orange-500"
+              required
+            />
+          </div>
+          <div class="mb-8">
+            <label
+              for="email"
+              class="block text-sm font-medium text-gray-700 mb-1"
+              >Email Address</label
+            >
+            <input
+              type="email"
+              id="email"
+              placeholder="Enter your email"
+              class="w-full p-3 border border-gray-300 rounded-lg focus:ring-orange-500 focus:border-orange-500"
+              required
+            />
+          </div>
+          <button
+            type="submit"
+            class="w-full bg-orange-600 text-white rounded-full py-3 text-lg font-semibold hover:bg-orange-700 transition-transform transform hover:scale-105"
+          >
+            Confirm Booking
+          </button>
+        </form>
+      </div>
+    </main>
+
+    <!-- Footer (Consistent with other pages) -->
+    <footer class="bg-gray-800 text-white mt-16">
+      <div class="container mx-auto px-6 py-12">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <div>
+            <h3 class="text-lg font-bold mb-4">Heritage Yatri</h3>
+            <p class="text-gray-400">
+              Your trusted companion for exploring the rich culture and heritage
+              of Western Odisha.
+            </p>
+          </div>
+          <div>
+            <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+            <ul class="space-y-2 text-gray-400">
+              <li><a href="about.html" class="hover:text-white">About Us</a></li>
+              <li><a href="contact.html" class="hover:text-white">Contact</a></li>
+              <li><a href="faq.html" class="hover:text-white">FAQs</a></li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="text-lg font-semibold mb-4">Explore</h3>
+            <ul class="space-y-2 text-gray-400">
+              <li><a href="destinations.html" class="hover:text-white">Destinations</a></li>
+              <li><a href="stays.html" class="hover:text-white">Hotels & Stays</a></li>
+              <li><a href="cuisine.html" class="hover:text-white">Local Cuisine</a></li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="text-lg font-semibold mb-4">Follow Us</h3>
+            <div class="flex space-x-4">
+              <a href="#" aria-label="Facebook" class="text-gray-400 hover:text-white">
+                <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v2.385z"></path>
+                </svg>
+              </a>
+              <a href="#" aria-label="Instagram" class="text-gray-400 hover:text-white">
+                <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.85s-.011 3.584-.069 4.85c-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07s-3.584-.012-4.85-.07c-3.252-.148-4.771-1.691-4.919-4.919-.058-1.265-.069-1.645-.069-4.85s.011-3.584.069-4.85c.149-3.225 1.664 4.771 4.919 4.919 1.266-.057 1.644-.069 4.85-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948s.014 3.667.072 4.947c.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072s3.667-.014 4.947-.072c4.358-.2 6.78-2.618 6.98-6.98.059-1.281.073-1.689.073-4.948s-.014-3.667-.072-4.947c-.2-4.358-2.618-6.78-6.98-6.98-1.281-.059-1.689-.073-4.948-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.162 6.162 6.162 6.162-2.759 6.162-6.162-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4s1.791-4 4-4 4 1.79 4 4-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.441 1.441 1.441 1.441-.645 1.441-1.441-.645-1.44-1.441-1.44z"></path>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="mt-12 border-t border-gray-700 pt-8 text-center text-gray-500">
+          <p>&copy; 2025 Heritage Yatri. All Rights Reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // CORRECTED DATA: This now contains the full hotel details.
+      const staysData = [
+        {
+          id: 1,
+          name: "Hotel Paradise",
+          type: "Luxury Hotel",
+          location: "Sambalpur",
+          price: 4500,
+          images: ["images/stay-paradise.webp", "images/stay-paradise-2.webp"],
+          amenities: ["Wi-Fi", "Pool", "AC", "Restaurant", "Gym"],
+          longDescription: "Experience unparalleled luxury at Hotel Paradise...",
+          mapUrl: "..."
+        },
+        {
+          id: 2,
+          name: "Classic Inn",
+          type: "Budget Hotel",
+          location: "Balangir",
+          price: 1200,
+          images: ["images/stay-classic-inn.webp", "images/stay-classic-inn-2.webp"],
+          amenities: ["Wi-Fi", "Parking", "AC", "24/7 Front Desk"],
+          longDescription: "Classic Inn provides clean, comfortable accommodation...",
+          mapUrl: "..."
+        },
+        {
+          id: 3,
+          name: "Odisha Homestay",
+          type: "Verified Homestay",
+          location: "Near Hirakud",
+          price: 900,
+          images: ["images/stay-odisha-homestay.webp"],
+          amenities: ["Wi-Fi", "Homemade Food", "Parking", "Garden"],
+          longDescription: "Experience true local hospitality...",
+          mapUrl: ""
+        },
+        {
+          id: 4,
+          name: "The River View",
+          type: "Boutique Hotel",
+          location: "Sambalpur",
+          price: 3200,
+          images: ["images/stay-river-view.webp"],
+          amenities: ["Wi-Fi", "River View", "AC", "Balcony", "Cafe"],
+          longDescription: "Wake up to stunning views of the Mahanadi river...",
+          mapUrl: ""
+        }
+      ];
+
+      document.addEventListener("DOMContentLoaded", () => {
+        const params = new URLSearchParams(window.location.search);
+        const stayId = parseInt(params.get("id"));
+
+        // Find the hotel data from the correct, full array
+        const stay = staysData.find((s) => s.id === stayId);
+
+        // Populate the page with the hotel's data
+        if (stay) {
+          document.getElementById("hotel-name").textContent = stay.name;
+          document.getElementById("hotel-location").textContent = stay.location;
+        } else {
+          // Handle case where ID is not found or invalid
+          document.getElementById("hotel-name").textContent = "Unknown Hotel";
+          document.getElementById("hotel-location").textContent =
+            "Please select a valid hotel from the Stays page.";
+        }
+
+        // Handle the form submission for the model
+        const form = document.getElementById("booking-form");
+        form.addEventListener("submit", (event) => {
+          event.preventDefault();
+          window.location.href = "booking-confirmation.html";
+        });
+      });
+    </script>
+  </body>
+</html>
